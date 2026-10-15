@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toyota Innova generations — India, 2005 to 2026</title>
+  <meta name="description" content="A plain-language guide to every Toyota Innova sold in India: the original, the Crysta, and the Hycross. Frames, engines, seats, fuel, and prices.">
+  <style>
+    :root {
+      --ink: #1c1915;
+      --muted: #5c564c;
+      --faint: #8a8276;
+      --line: #e4ddd2;
+      --paper: #f7f4ee;
+      --card: #fffdf9;
+      --accent: #9a3412;
+      --accent-soft: #f3e6dc;
+      --info: #1e3a4c;
+      --info-soft: #e7eef2;
+      --warn: #7a4b12;
+      --warn-soft: #f8efd8;
+      --ok: #1f4d38;
+      --ok-soft: #e5f0ea;
+      --shadow: 0 1px 0 rgba(28, 25, 21, 0.04);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
+    header.site {
+      padding: 28px 0 8px;
+    }
+    .eyebrow {
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 8px;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.05;
+      font-weight: 600;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .lede { font-size: 19px; color: var(--muted); max-width: 68ch; margin: 0; }
+    nav.jump {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: rgba(247, 244, 238, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      margin-top: 22px;
+    }
+    nav.jump .wrap {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      padding: 12px 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 14px;
+    }
+    nav.jump a { color: var(--ink); text-decoration: none; white-space: nowrap; }
+    nav.jump a:hover { color: var(--accent); }
+    section { padding: 36px 0; }
+    h2 {
+      font-size: 28px;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    h3 { font-size: 20px; margin: 0 0 6px; }
+    .sub { color: var(--muted); margin: 0 0 18px; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+    }
+    .stat b {
+      display: block;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 28px;
+      letter-spacing: -0.03em;
+    }
+    .stat span { color: var(--muted); font-size: 14px; }
+    .cars, .two, .gen-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .cars { grid-template-columns: repeat(3, 1fr); }
+    .two { grid-template-columns: 1fr 1fr; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .card p { margin: 8px 0 0; }
+    .label {
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin: 0;
+    }
+    svg.side { width: 100%; height: auto; display: block; }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .tabs button {
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 14px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink);
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+    .tabs button[aria-selected="true"] {
+      background: var(--ink);
+      color: #fffdf9;
+      border-color: var(--ink);
+    }
+    .panel[hidden] { display: none; }
+    .callout {
+      padding: 14px 16px;
+      margin: 14px 0;
+    }
+    .callout.info { background: var(--info-soft); color: var(--info); }
+    .callout.warn { background: var(--warn-soft); color: var(--warn); }
+    .callout.ok { background: var(--ok-soft); color: var(--ok); }
+    .callout strong { display: block; margin-bottom: 4px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card);
+      font-size: 15px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    td.num, th.num { text-align: right; white-space: nowrap; }
+    .bars { display: grid; gap: 10px; }
+    .bar-row { display: grid; grid-template-columns: 150px 1fr 64px; gap: 10px; align-items: center; }
+    .bar-track { background: #efeae2; height: 14px; }
+    .bar-fill { background: var(--info); height: 14px; }
+    .note { color: var(--faint); font-size: 13px; }
+    .glossary { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 22px 0 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 800px) {
+      .stats, .cars, .two, .glossary { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 1fr; gap: 4px; }
+      td.num, th.num { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <p class="eyebrow">India reference · 2005–2026</p>
+      <h1>Toyota Innova, three cars, one name</h1>
+      <p class="lede">The original Innova, the Crysta, and the Hycross. What changed in the metal, how to tell them apart, and what a new one costs. Prices are ex-showroom as of September 2026 and do not include Kerala road tax or insurance.</p>
+      <div class="stats">
+        <div class="stat"><b>2005</b><span>First Innova on sale</span></div>
+        <div class="stat"><b>2016</b><span>Crysta replaces it</span></div>
+        <div class="stat"><b>2023</b><span>Hycross joins the range</span></div>
+        <div class="stat"><b>2</b><span>Models you can buy new today</span></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="jump" aria-label="Page sections">
+    <div class="wrap">
+      <a href="#shapes">Shapes</a>
+      <a href="#underneath">Underneath</a>
+      <a href="#generations">Generations</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#fuel">Fuel</a>
+      <a href="#prices">Prices</a>
+      <a href="#seats">7 or 8 seats</a>
+      <a href="#words">PS and facelift</a>
+      <a href="#rental">₹10 lakh rental</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="shapes">
+      <div class="wrap">
+        <h2>How to tell them apart</h2>
+        <p class="sub">These are simplified side views, drawn to show proportion. They are not manufacturer photos.</p>
+        <div class="cars">
+          <article class="card">
+            <svg class="side" viewBox="0 0 280 100" role="img" aria-label="Original Innova side view">
+              <path d="M18 62 L28 62 L34 48 L52 40 L78 36 L168 36 L188 42 L214 48 L230 62 L248 62 L248 70 L18 70 Z" fill="#1c1915"/>
+              <path d="M56 42 L78 38 L118 38 L118 50 L54 50 Z M122 38 L166 38 L184 44 L184 50 L122 50 Z" fill="#d9d0c4"/>
+              <circle cx="58" cy="70" r="14" fill="#5c564c"/><circle cx="58" cy="70" r="6" fill="#f7f4ee"/>
+              <circle cx="196" cy="70" r="14" fill="#5c564c"/><circle cx="196" cy="70" r="6" fill="#f7f4ee"/>
+            </svg>
+            <h3>Innova</h3>
+            <p class="label">Feb 2005 – early 2016</p>
+            <p>Tall and boxy. Short bonnet, upright glass. A wide chrome smile means a late one, around 2013–2015.</p>
+          </article>
+          <article class="card">
+            <svg class="side" viewBox="0 0 280 100" role="img" aria-label="Innova Crysta side view">
+              <path d="M14 64 L26 64 L34 46 L58 34 L92 28 L176 28 L206 36 L228 48 L246 64 L258 64 L258 72 L14 72 Z" fill="#1c1915"/>
+              <path d="M62 36 L92 30 L140 30 L140 46 L60 48 Z M144 30 L174 30 L200 38 L200 46 L144 46 Z" fill="#d9d0c4"/>
+              <circle cx="58" cy="72" r="14" fill="#5c564c"/><circle cx="58" cy="72" r="6" fill="#f7f4ee"/>
+              <circle cx="206" cy="72" r="14" fill="#5c564c"/><circle cx="206" cy="72" r="6" fill="#f7f4ee"/>
+            </svg>
+            <h3>Innova Crysta</h3>
+            <p class="label">May 2016 – expected around 2027</p>
+            <p>Longer bonnet, sharper nose, closer to a Fortuner from the side. A 2020 facelift has slimmer lamps and a larger grille.</p>
+          </article>
+          <article class="card">
+            <svg class="side" viewBox="0 0 280 100" role="img" aria-label="Innova Hycross side view">
+              <path d="M16 66 L30 66 L40 50 L70 34 L110 26 L190 26 L220 36 L242 50 L258 66 L268 66 L268 74 L16 74 Z" fill="#9a3412"/>
+              <path d="M74 36 L110 28 L150 28 L150 46 L72 50 Z M154 28 L188 28 L214 38 L214 46 L154 46 Z" fill="#f3e6dc"/>
+              <circle cx="62" cy="74" r="14" fill="#5c564c"/><circle cx="62" cy="74" r="6" fill="#f7f4ee"/>
+              <circle cx="214" cy="74" r="14" fill="#5c564c"/><circle cx="214" cy="74" r="6" fill="#f7f4ee"/>
+            </svg>
+            <h3>Innova Hycross</h3>
+            <p class="label">Jan 2023 – on sale</p>
+            <p>Lower, with a raked windscreen. From the side it reads as a large car. The Crysta still reads as a van.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="underneath">
+      <div class="wrap">
+        <h2>What changed underneath</h2>
+        <p class="sub">The first two Innovas are a small truck with three rows of seats. The Hycross is a large car.</p>
+        <div class="two">
+          <article class="card">
+            <svg viewBox="0 0 220 90" width="100%" height="88" role="img" aria-label="Ladder frame with rear wheels filled">
+              <rect x="48" y="28" width="124" height="8" fill="#1c1915"/>
+              <rect x="48" y="54" width="124" height="8" fill="#1c1915"/>
+              <rect x="48" y="28" width="8" height="34" fill="#1c1915"/>
+              <rect x="164" y="28" width="8" height="34" fill="#1c1915"/>
+              <rect x="100" y="28" width="8" height="34" fill="#1c1915"/>
+              <circle cx="36" cy="32" r="10" fill="none" stroke="#8a8276" stroke-width="3"/>
+              <circle cx="36" cy="58" r="10" fill="none" stroke="#8a8276" stroke-width="3"/>
+              <circle cx="184" cy="32" r="10" fill="#1c1915"/>
+              <circle cx="184" cy="58" r="10" fill="#1c1915"/>
+            </svg>
+            <h3>2005 Innova and Crysta</h3>
+            <p>Two metal rails run the length of the floor, with cross pieces. The cabin is bolted on top. Filled circles are the rear wheels, the ones that get the power. You can feel the spinning shaft as a hump between the front seats.</p>
+          </article>
+          <article class="card">
+            <svg viewBox="0 0 220 90" width="100%" height="88" role="img" aria-label="Monocoque body with front wheels filled">
+              <rect x="40" y="22" width="140" height="46" rx="16" fill="none" stroke="#9a3412" stroke-width="4"/>
+              <circle cx="62" cy="32" r="10" fill="#9a3412"/>
+              <circle cx="62" cy="58" r="10" fill="#9a3412"/>
+              <circle cx="158" cy="32" r="10" fill="none" stroke="#8a8276" stroke-width="3"/>
+              <circle cx="158" cy="58" r="10" fill="none" stroke="#8a8276" stroke-width="3"/>
+            </svg>
+            <h3>Hycross</h3>
+            <p>One stiff body, no separate rails. Filled circles are the front wheels. They steer and they drive. The floor is flatter because there is no shaft to the back.</p>
+          </article>
+        </div>
+
+        <h3 style="margin-top:22px">Why a full Crysta feels planted on a wet ghat</h3>
+        <p>Passengers and luggage sit over the rear tyres. Those are the tyres that push. More weight on a tyre means more grip, so a Crysta with seven people presses its driving tyres into the road as it climbs.</p>
+        <p>A Hycross asks the front tyres to steer and to drive, while the people sit behind them. On a wet hairpin the nose is the light end. The front tyres are easier to spin.</p>
+        <div class="callout info">
+          <strong>Wayanad, just after rain</strong>
+          Second-gear corner, six adults and bags. In a Crysta you feed the throttle and the back of the car squats and goes. In a front-driven MPV the front tyres often slip first, then traction control catches it. Both cars make the corner. The Crysta makes it with less drama. Bald rear tyres will still slide.
+        </div>
+        <p>They last on rough kilometres because the rear axle is one solid beam, the rails take the bending, and workshops already know the bushes, clutch, shaft, and differential. A side impact that bends a rail is often the end of the car. Floodwater in the axle ruins it quietly.</p>
+      </div>
+    </section>
+
+    <section id="generations">
+      <div class="wrap">
+        <h2>Open one generation</h2>
+        <div class="tabs" role="tablist">
+          <button role="tab" id="tab-original" aria-selected="false" aria-controls="panel-original">Innova</button>
+          <button role="tab" id="tab-crysta" aria-selected="true" aria-controls="panel-crysta">Innova Crysta</button>
+          <button role="tab" id="tab-hycross" aria-selected="false" aria-controls="panel-hycross">Innova Hycross</button>
+        </div>
+
+        <article class="panel card" id="panel-original" role="tabpanel" hidden>
+          <p class="label">Feb 2005 – early 2016</p>
+          <h3>The original, boxy Innova</h3>
+          <div class="gen-grid two">
+            <div>
+              <p><strong>Bones.</strong> Ladder frame, same family as the Hilux and Fortuner of that era.</p>
+              <p><strong>Drive.</strong> Rear-wheel drive. The engine pushes the back wheels.</p>
+            </div>
+            <div>
+              <p><strong>Engines.</strong> 2.0 petrol, 136 PS, manual. 2.5 diesel, 102 PS, manual. The diesel got an intercooler around the BS4 change. Power stayed about 102 PS; response improved.</p>
+              <p><strong>Seats.</strong> 7-seat captain chairs, or 8-seat with a middle bench. E, G, V, and later Z.</p>
+            </div>
+          </div>
+          <div class="callout info">
+            <strong>On a real trip</strong>
+            A 2011 G diesel climbing to Munnar with six passengers will get there, in a lower gear, with the engine loud. Overtaking a bus needs a long straight. Many of these have crossed 2–3 lakh km and still run.
+          </div>
+          <p>Launch price on 24 February 2005: petrol from ₹6.82 lakh, diesel from ₹7.42 lakh. Before 2015, a base E often had a weak rear blower. The 2015 update put dual airbags and rear air-con vents on every variant.</p>
+        </article>
+
+        <article class="panel card" id="panel-crysta" role="tabpanel">
+          <p class="label">May 2016 – on sale, expected to end around 2027</p>
+          <h3>The sharp, bigger Crysta</h3>
+          <div class="gen-grid two">
+            <div>
+              <p><strong>Bones.</strong> Still a ladder frame, with thicker rails than the first Innova. Almost no shared parts with the old car. Longer, wider, and a few hundred kilos heavier.</p>
+              <p><strong>Drive.</strong> Rear-wheel drive. Same basic idea, with more power.</p>
+            </div>
+            <div>
+              <p><strong>Engines.</strong> 2016–2020: 2.4 diesel manual (150 PS) and 2.8 diesel automatic (174 PS), plus a 2.7 petrol from August 2016. From November 2020 the 2.8 was dropped and a 2.4 automatic took its place. BS6 diesels need AdBlue. From 2023 only the 2.4 diesel manual remains.</p>
+              <p><strong>Seats.</strong> 7-seat or 8-seat. Top ZX is 7-seat only.</p>
+            </div>
+          </div>
+          <div class="callout info">
+            <strong>On a real trip</strong>
+            A 2018 2.4 GX with seven people and luggage holds 80–90 km/h on the Wayanad ghat in a gear lower than the flat. A 2.8 automatic from 2017–2020 does the same climb more smoothly and costs more to buy and to repair.
+          </div>
+          <p>If you see an automatic Crysta, it is a 2022 or older car. A 2.8 badge means 2016–2020. Real-world tour use is often 10–13 km/l. If the AdBlue tank on a late-2020-onward car runs dry, the engine cuts power.</p>
+        </article>
+
+        <article class="panel card" id="panel-hycross" role="tabpanel" hidden>
+          <p class="label">Jan 2023 – on sale</p>
+          <h3>The low, car-like Hycross</h3>
+          <div class="gen-grid two">
+            <div>
+              <p><strong>Bones.</strong> Monocoque shell. The body itself is the frame. In Indonesia this car is the Innova Zenix. Maruti sells a close cousin as the Invicto.</p>
+              <p><strong>Drive.</strong> Front-wheel drive. No diesel. The selector is a small toggle. The hybrid decides when the petrol engine joins the electric motor.</p>
+            </div>
+            <div>
+              <p><strong>Engines.</strong> 2.0 petrol, about 174 PS, CVT, claimed 16.1 km/l. Strong hybrid, about 184 hp combined, e-CVT, claimed 23.2 km/l.</p>
+              <p><strong>Seats.</strong> 7-seat or 8-seat on G, GX, and VX. ZX and ZX(O) are 7-seat only. Ottomans on higher trims.</p>
+            </div>
+          </div>
+          <div class="callout info">
+            <strong>On a real trip</strong>
+            Kochi to Munnar and back, hybrid VX, family of five: drivers commonly report mid-teens km/l. The same loop in a petrol G is often closer to 9–11 km/l. On a broken estate road the Crysta still feels the tougher of the two.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <div class="wrap">
+        <h2>Updates inside each generation</h2>
+        <p class="sub">A facelift keeps the same car and changes the face and the kit. A new generation replaces the car.</p>
+        <table>
+          <thead>
+            <tr><th>Year</th><th>What you would notice</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2005</td><td>Launch, 24 Feb. Replaces the Qualis. E, G, and V. Petrol from ₹6.82 lakh, diesel from ₹7.42 lakh.</td></tr>
+            <tr><td>2009</td><td>Facelift: new grille and bumpers. India launch of this face on 28 Jan. Same engines.</td></tr>
+            <tr><td>2011–12</td><td>BS4 diesel with an intercooler badge. Then squarer headlamps. Z trim arrives above V.</td></tr>
+            <tr><td>2015</td><td>Dual airbags on every variant. Rear air-con vents become standard. Last year before the Crysta.</td></tr>
+            <tr><td>May 2016</td><td>All-new Crysta. 2.4 diesel manual and 2.8 diesel automatic. Petrol 2.7 added in August after the large-diesel limits in Delhi.</td></tr>
+            <tr><td>Nov 2020</td><td>Facelift: new face, more kit. 2.8 engine dropped. 2.4 automatic replaces it. BS6 diesels need AdBlue.</td></tr>
+            <tr><td>Jan 2023</td><td>Hycross goes on sale. Crysta returns beside it as 2.4 diesel manual only. Petrol Crysta and automatic Crysta stop.</td></tr>
+            <tr><td>2026</td><td>Crysta cabin and small styling tweaks. Same 2.4 diesel manual. Price ₹19.72–26.63 lakh. Expected last stretch before a 2027 wind-down under tighter fleet emission rules.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="fuel">
+      <div class="wrap">
+        <h2>Fuel on a loaded trip</h2>
+        <p class="sub">Kilometres per litre. Bars are midpoints of commonly reported real-world ranges with passengers, not the official test figures.</p>
+        <div class="bars" aria-label="Typical loaded fuel use">
+          <div class="bar-row"><span>Old 2.5 diesel</span><div class="bar-track"><div class="bar-fill" style="width:48%"></div></div><span>11.5</span></div>
+          <div class="bar-row"><span>Crysta 2.4</span><div class="bar-track"><div class="bar-fill" style="width:48%"></div></div><span>11.5</span></div>
+          <div class="bar-row"><span>Hycross petrol</span><div class="bar-track"><div class="bar-fill" style="width:42%"></div></div><span>10</span></div>
+          <div class="bar-row"><span>Hycross hybrid</span><div class="bar-track"><div class="bar-fill" style="width:67%"></div></div><span>16</span></div>
+        </div>
+        <p class="note">Claimed figures sit higher: about 16.1 km/l for the Hycross petrol and 23.2 km/l for the hybrid. A Crysta on a highway tour often matches the old diesel on fuel and pulls past traffic more easily. Scale tops out at 24 km/l so the hybrid claim would fill the row.</p>
+      </div>
+    </section>
+
+    <section id="prices">
+      <div class="wrap">
+        <h2>What a new one costs</h2>
+        <p class="sub">Ex-showroom, September 2026. Kerala on-road is higher because lifetime tax is charged on the original price.</p>
+        <table>
+          <thead>
+            <tr><th>Model</th><th>Engine</th><th class="num">Ex-showroom</th><th>Seats</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Crysta GX / GX Fleet</td><td>2.4 diesel manual</td><td class="num">₹19.72 lakh</td><td>7</td></tr>
+            <tr><td>Crysta GX</td><td>2.4 diesel manual</td><td class="num">₹19.77 lakh</td><td>8</td></tr>
+            <tr><td>Crysta GX+</td><td>2.4 diesel manual</td><td class="num">₹21.15–21.20 lakh</td><td>7 or 8</td></tr>
+            <tr><td>Crysta VX</td><td>2.4 diesel manual</td><td class="num">₹24.93–24.98 lakh</td><td>7 or 8</td></tr>
+            <tr><td>Crysta ZX</td><td>2.4 diesel manual</td><td class="num">₹26.63 lakh</td><td>7 only</td></tr>
+            <tr><td>Hycross G / GX petrol</td><td>2.0 petrol CVT</td><td class="num">₹18.70–20.97 lakh</td><td>7 or 8</td></tr>
+            <tr><td>Hycross VX / VX(O) hybrid</td><td>2.0 strong hybrid</td><td class="num">₹26.76–28.82 lakh</td><td>7 or 8</td></tr>
+            <tr><td>Hycross ZX / ZX(O) hybrid</td><td>2.0 strong hybrid</td><td class="num">₹31.20–31.84 lakh</td><td>7 only</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Crysta prices: Autocar India, 2026 model year. Hycross: Autocar India, September 2026, Delhi ex-showroom. Some listings add a ZX(O) LE near ₹33 lakh. The 2027 Crysta wind-down is the reported plan around CAFE-3 norms, not a date Toyota has confirmed.</p>
+      </div>
+    </section>
+
+    <section id="seats">
+      <div class="wrap">
+        <h2>7 seats or 8</h2>
+        <div class="two">
+          <article class="card">
+            <h3>8-seater</h3>
+            <p>A bench in the middle, so three people sit there and two sit in the last row. That is seven passengers plus a driver. This is the layout tour groups ask for.</p>
+          </article>
+          <article class="card">
+            <h3>7-seater</h3>
+            <p>Two captain chairs in the middle. More knee room, an aisle to the back, and one fewer paying passenger. On a Crysta or Hycross, the top ZX trim is this layout only.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="words">
+      <div class="wrap">
+        <h2>Two words that keep coming up</h2>
+        <div class="glossary">
+          <article class="card">
+            <h3>PS</h3>
+            <p>Metric horsepower. <em>Pferdestärke</em> is German for “horse strength.” 136 PS is about 134 bhp. When you compare Indian brochures, treat PS and bhp as the same idea: how strong the engine is.</p>
+            <p>Power is how quickly the car can get up to speed. The other number, Nm, is the pull you feel in a low gear on a ghat with the car full. The old diesel had 102 PS, which is why overtaking needed a long straight.</p>
+          </article>
+          <article class="card">
+            <h3>Facelift</h3>
+            <p>A mid-life update of the same car. Toyota keeps the body, the frame, and usually the engines, and changes the grille, lamps, bumpers, wheels, and some interior trim.</p>
+            <p>A 2009 Innova is still the first Innova. A 2020 Crysta is still the 2016 car. The Crysta of May 2016 was a new generation: new body, new engines, new interior.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="rental">
+      <div class="wrap">
+        <h2>For a ₹10 lakh rental car in Kerala</h2>
+        <div class="callout warn">
+          <strong>A new Crysta or Hycross is about twice this budget before Kerala tax.</strong>
+          The cars that fit are a used first-generation 2.5 diesel, or an early Crysta 2.4 manual whose service book matches the kilometres. Prefer the 8-seat layout if the car will take tour groups. Leave about ₹1–1.5 lakh of the budget for tax, insurance, and tyres if the car comes from another state. Kerala tax is charged on the original invoice, reduced for age, so a cheap car from Uttar Pradesh is often not cheap once it is legal here.
+        </div>
+        <div class="callout ok">
+          <strong>What to walk away from</strong>
+          No service history, a repaired pillar, flood silt under the seats, a weak rear blower, or a tired clutch. A BS6 Crysta also needs AdBlue on tour.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Personal reference for Innova generations sold in India. Figures compiled in September 2026 from Autocar India price lists and widely reported owner and road-test ranges. Check a current dealer quote before you pay anyone.
+    </div>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const panels = document.querySelectorAll('[role="tabpanel"]');
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((item) => item.setAttribute("aria-selected", "false"));
+        panels.forEach((panel) => { panel.hidden = true; });
+        tab.setAttribute("aria-selected", "true");
+        document.getElementById(tab.getAttribute("aria-controls")).hidden = false;
+      });
+    });
+  </script>
+</body>
+</html>
