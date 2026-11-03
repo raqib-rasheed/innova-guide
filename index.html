@@ -176,6 +176,24 @@
     .bar-track { background: #efeae2; height: 14px; }
     .bar-fill { background: var(--info); height: 14px; }
     .note { color: var(--faint); font-size: 13px; }
+    .faces { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    figure.shot {
+      margin: 0;
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    figure.shot img { width: 100%; height: auto; display: block; }
+    figure.shot figcaption { padding: 12px 14px 16px; }
+    figure.shot h3 { margin-top: 0; }
+    figure.shot ul { margin: 8px 0 0; padding-left: 18px; }
+    .credit {
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 12px;
+      color: var(--faint);
+      margin: 8px 0 0;
+    }
+    .credit a { color: var(--faint); }
     .glossary { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     footer {
       border-top: 1px solid var(--line);
@@ -184,7 +202,7 @@
       font-size: 14px;
     }
     @media (max-width: 800px) {
-      .stats, .cars, .two, .glossary { grid-template-columns: 1fr; }
+      .stats, .cars, .two, .glossary, .faces { grid-template-columns: 1fr; }
       .bar-row { grid-template-columns: 1fr; gap: 4px; }
       td.num, th.num { white-space: normal; }
     }
@@ -211,6 +229,7 @@
       <a href="#underneath">Underneath</a>
       <a href="#generations">Generations</a>
       <a href="#types">Type 1 to 4</a>
+      <a href="#later-faces">Crysta and Hycross</a>
       <a href="#trims">G, V, Z</a>
       <a href="#timeline">Timeline</a>
       <a href="#fuel">Fuel</a>
@@ -381,41 +400,117 @@
     <section id="types">
       <div class="wrap">
         <h2>Type 1, Type 2, Type 3, Type 4</h2>
-        <p class="sub">These names are only for the first Innova, 2005 to early 2016. Same ladder, same 102 PS diesel. Each type is a facelift: a new face on the same car. The Crysta and the Hycross are new cars, so sellers do not call them Type 1 or Type 2. Some yards call every 2012–2016 car a Type 3. Ask the year, then use the face below.</p>
-        <table>
-          <thead>
-            <tr><th>What sellers say</th><th>Years</th><th>How you spot it</th><th>What actually changed</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Type 1</td>
-              <td>2005–2008</td>
-              <td>Small plain grille, softer lamps, simple bumpers. An E often still has black, unpainted bumpers.</td>
-              <td>The launch car. E, G, and V. Manual air-con only. No intercooler badge.</td>
-            </tr>
-            <tr>
-              <td>Type 2</td>
-              <td>2009–2011</td>
-              <td>New grille and bumpers. The shape is still the soft Type 1 shape. From about April 2010, a BS4 diesel wears an “Intercooler” badge on the front fender.</td>
-              <td>First facelift. Same 102 PS. The V gains automatic climate control and steering audio buttons. Light brown wood trim on the V.</td>
-            </tr>
-            <tr>
-              <td>Type 3</td>
-              <td>2012</td>
-              <td>Sharp, swept headlamps and a new bumper with trapezoid fog-lamp housings. Easy to separate from a Type 2 once you see the lamps.</td>
-              <td>Second facelift. V gets a touchscreen, Bluetooth, and a steering wheel like the Altis of that time. Body-coloured mirrors with turn lamps.</td>
-            </tr>
-            <tr>
-              <td>Type 4</td>
-              <td>2013–2016</td>
-              <td>The big chrome shield grille, the one that looks like a small Fortuner. A Z has a roof spoiler and side graphics.</td>
-              <td>Third face, and the Z trim arrives. 2015 is the last of this face: two airbags and rear air-con vents on every variant, including the E and the G.</td>
-            </tr>
-          </tbody>
-        </table>
+        <p class="sub">These names are only for the first Innova, 2005 to early 2016. Same ladder, same 102 PS diesel. Each new type is a facelift: look at the grille, the lamps, and the bumper. The doors and the glass stay the same. Some yards call every 2012–2016 car a Type 3. Use the face in the photo.</p>
+        <div class="faces">
+          <figure class="shot">
+            <img src="images/type1.jpg" alt="Type 1 Innova, 2005 to 2008, with a small dark grille and simple rounded lamps">
+            <figcaption>
+              <h3>Type 1 · 2005–2008</h3>
+              <p>The launch face. Nothing on this car was a facelift yet.</p>
+              <ul>
+                <li>Small grille, dark on a base car, thin chrome slats on a G or V.</li>
+                <li>Lamps are simple and rounded at the outer corner.</li>
+                <li>Bumper is plain. A base E often has no fog lamps, and the bumper may be left black.</li>
+                <li>Manual air-con only. No “Intercooler” badge.</li>
+              </ul>
+              <p class="credit">Photo: Ethan Llamas, 2007 Innova 2.0 J, <a href="https://commons.wikimedia.org/wiki/File:Toyota_Innova_(AN40)_2.0_J_2007.jpg">Wikimedia Commons</a>, CC BY-SA 4.0.</p>
+            </figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="images/type2.jpg" alt="Type 2 Innova, 2009 to 2011, with a wider chrome grille and a deeper bumper">
+            <figcaption>
+              <h3>Type 2 · 2009–2011 · first facelift</h3>
+              <p>Same soft body as Type 1. The face is what moved.</p>
+              <ul>
+                <li>New bumper, deeper, with a bigger lower air opening.</li>
+                <li>Wider grille, with a chrome bar over horizontal slats.</li>
+                <li>Tail lamps on higher cars pick up a chrome strip.</li>
+                <li>The V gains automatic climate control, steering audio buttons, and a new alloy design.</li>
+                <li>From about April 2010, a BS4 diesel has an “Intercooler” badge on the front fender. Power stays 102 PS.</li>
+              </ul>
+              <p class="credit">Photo: オーバードライブ83, 2009 Innova 2.0 G, <a href="https://commons.wikimedia.org/wiki/File:2009_Toyota_Kijang_Innova_2.0_G_TGN40R_(190316).jpg">Wikimedia Commons</a>, CC BY-SA 4.0.</p>
+            </figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="images/type3.jpg" alt="Type 3 Innova, 2012, with swept lamps and fog lamps in the bumper">
+            <figcaption>
+              <h3>Type 3 · 2012 · second facelift</h3>
+              <p>This is the first face you can separate from across the road.</p>
+              <ul>
+                <li>Headlamps sweep back into the fender. Type 2 lamps stay rounder.</li>
+                <li>New grille with a thick chrome frame.</li>
+                <li>New bumper, with fog lamps set low in the corners.</li>
+                <li>New tail lamps.</li>
+                <li>On the V: a touchscreen, Bluetooth, body-coloured mirrors with turn lamps, and a new steering wheel.</li>
+              </ul>
+              <p class="credit">Photo: Ethan Llamas, 2012 Innova 2.0 G, <a href="https://commons.wikimedia.org/wiki/File:2012_Toyota_Innova_2.0_G_in_Pearl_White,_front_left,_05-11-2024.jpg">Wikimedia Commons</a>, CC BY-SA 4.0.</p>
+            </figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="images/type4.jpg" alt="Type 4 Innova, 2013 to 2016, with the large chrome shield grille">
+            <figcaption>
+              <h3>Type 4 · 2013–2016 · third face</h3>
+              <p>The lamps stay in the Type 3 shape. The grille is the tell.</p>
+              <ul>
+                <li>A large chrome shield grille, the one that looks like a small Fortuner.</li>
+                <li>Chrome around the fog lamps.</li>
+                <li>The Z trim starts here: roof spoiler, side graphics, two-tone leather, more chrome.</li>
+                <li>2015, still this face: new alloys, a wood-look steering wheel, and two airbags plus rear air-con vents on every variant, including E and G.</li>
+              </ul>
+              <p class="credit">Photo: Alex Neman, 2013 Innova V, <a href="https://commons.wikimedia.org/wiki/File:2013_Toyota_Kijang_Innova_2.0_V_Luxury_(front),_West_Surabaya.jpg">Wikimedia Commons</a>, CC BY-SA 4.0. The Indian Z adds a roof spoiler this front view does not show.</p>
+            </figcaption>
+          </figure>
+        </div>
         <div class="callout info">
           <strong>Same car, four faces</strong>
-          A Type 4 still has the 2.5 diesel and the ladder frame. It is not a Crysta. If the bonnet is long and the nose is sharp like a Fortuner from the side, you are looking at a Crysta, which starts in May 2016.
+          A Type 4 still has the 2.5 diesel and the ladder frame. It is not a Crysta. If the bonnet is long and the lamps are thin and wide, you have left these four types behind.
+        </div>
+
+        <h2 id="later-faces" style="margin-top:28px">The two cars that came after</h2>
+        <p class="sub">Sellers do not call these Type 5. The 2016 car is a new generation. The 2020 car is a facelift of that generation. The Hycross is another new car.</p>
+        <div class="faces">
+          <figure class="shot">
+            <img src="images/crysta-2016.jpg" alt="2016 Innova Crysta with a long bonnet, thin wide lamps, and a broad chrome grille">
+            <figcaption>
+              <h3>Crysta · May 2016–2020</h3>
+              <p>New body. Do not line it up with a Type 4 and expect the same doors.</p>
+              <ul>
+                <li>Longer bonnet, wider body, lamps stretched thin across the nose.</li>
+                <li>A wide horizontal chrome grille, not the upright Type 4 shield.</li>
+                <li>Sharper shoulder line. The old Innova looks upright and soft beside it.</li>
+                <li>Engines change too: 2.4 diesel manual, 2.8 diesel automatic, and later a 2.7 petrol.</li>
+              </ul>
+              <p class="credit">Photo: Premnath Kudva, 2016 Indian Innova Crysta 2.4 Z, <a href="https://commons.wikimedia.org/wiki/File:Toyota_Innova_Crysta_2.4_Z_front_right.jpg">Wikimedia Commons</a>, CC BY-SA 4.0.</p>
+            </figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="images/crysta-facelift.jpg" alt="2020 facelift Innova with a taller slatted grille and sharper lamps">
+            <figcaption>
+              <h3>Crysta facelift · November 2020 onward</h3>
+              <p>Same Crysta body. The nose is the change.</p>
+              <ul>
+                <li>The grille grows taller, with bigger slats.</li>
+                <li>The lamps get sharper inner corners.</li>
+                <li>The bumper gets larger fog-lamp housings.</li>
+                <li>Higher variants add new alloys and front parking sensors. From this face, the 2.8 engine is gone and a BS6 2.4 needs AdBlue.</li>
+              </ul>
+              <p class="credit">Photo: Captainmorlypogi1959, 2021 facelift Innova, <a href="https://commons.wikimedia.org/wiki/File:Toyota_Innova_2.8_E.jpg">Wikimedia Commons</a>, CC BY-SA 4.0. Photographed in the Philippines. The Indian Crysta bumper and alloys differ a little; the taller grille and sharper lamps are the same change.</p>
+            </figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="images/hycross.jpg" alt="Innova Hycross, sold abroad as the Zenix, with a low nose and slim lamps">
+            <figcaption>
+              <h3>Hycross · January 2023</h3>
+              <p>A new car again, not a facelift of the Crysta.</p>
+              <ul>
+                <li>The nose sits lower. The windscreen rakes back. It reads as a large car, not a van.</li>
+                <li>Slim lamps and a large patterned grille.</li>
+                <li>No diesel, and the engine pulls the front wheels.</li>
+                <li>India sells this shape as the Hycross. The grille pattern on an Indian car is a little different from this one.</li>
+              </ul>
+              <p class="credit">Photo: Alex Neman, 2022 Innova Zenix V, <a href="https://commons.wikimedia.org/wiki/File:2022_Toyota_Kijang_Innova_Zenix_V_(front).jpg">Wikimedia Commons</a>, CC BY-SA 4.0.</p>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
